@@ -26,3 +26,20 @@ def build_pipeline(model):
         ('scaler', StandardScaler()),
         ('model', model)
     ])
+
+
+def evaluate_model(pipline, X_train, X_test, y_train, y_test):
+    """Fit the pipeline, make prediction, and evelaute the model"""
+    pipline.fit(X_train, y_train)
+    prediction = pipline.predict(X_test)
+    return accuracy_score(y_test, prediction)
+
+def main():
+     # Load the data
+     # Preprocess the data
+     # Logistic Regression
+     # Random Forest Classifier
+
+
+if __name__ == "__main__":
+    main()
